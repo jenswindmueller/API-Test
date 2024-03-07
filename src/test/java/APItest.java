@@ -28,6 +28,7 @@ public class APItest {
         JSONObject result = results.getJSONObject(0);
         int age = result.getJSONObject("dob").getInt("age");
         String nationality = result.getString("nat");
+        System.out.println("checking age and nationality of the person:");
         System.out.println("Response Code: " + response.getStatusCode());
         System.out.println("Age: " + age);
         System.out.println(nationality);
@@ -68,6 +69,7 @@ public class APItest {
         // Sort users
         List<JSONObject> sortedUsers = sortUsers(users);
         // Print each user
+        System.out.println("Sorted Users:");
         sortedUsers.forEach(user -> System.out.println(user.getJSONObject("name").getString("first")));
     }
 }
