@@ -65,11 +65,9 @@ public class APItest {
     public void fetchAndSortUsers() {
         // Fetch users
         List<JSONObject> users = fetchUsers();
-    
         // Sort users
         List<JSONObject> sortedUsers = sortUsers(users);
         // Print each user
         sortedUsers.forEach(user -> System.out.println(user.getJSONObject("name").getString("first")));
-        
     }
 }
